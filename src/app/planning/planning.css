@@ -10,20 +10,16 @@
 
 body{
     
-
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-   min-height: 100vh;
-
+    overflow-x: hidden; 
+    background: linear-gradient(0deg, oklch(71.5% 0.143 215.221) 0%, rgba(0, 0, 0, 1) 100%);
+    background-size: cover;
+    background-attachment: fixed; 
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
-.main{
-background: linear-gradient(
-    0deg,
-    oklch(71.5% 0.143 215.221) 0%,
-    rgba(0, 0, 0, 1) 100%
-);
-}
+
+
 .section1 {
  display: flex;
   justify-content: center;  /* centre horizontalement */
@@ -92,4 +88,32 @@ background: linear-gradient(
 
 .container1 div:hover p {
   color: black;
+}
+.section4{
+  display: flex; justify-content: center; align-items: center; margin-top: 70px
+}
+@media(max-width:780px){
+.section1 h1 {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  text-align: center
+}
+.section2{
+  text-align: center;
+}
+.section3 p{
+  text-align: center;
+  margin:15px 10px ;
+}
+.section4 span{
+margin: 10px;
+}
+.section4 h1{
+  text-align: start;
+}
+.container1 div{
+  margin:10px
+}
 }

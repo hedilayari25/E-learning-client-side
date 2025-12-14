@@ -5,16 +5,17 @@
   font-family: 'Poppins', sans-serif;
   color: #fff;
 }
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  min-height: 100vh;
+body{
+    
+    overflow-x: hidden; 
+    background: linear-gradient(0deg, oklch(71.5% 0.143 215.221) 0%, rgba(0, 0, 0, 1) 100%);
+    background-size: cover;
+    background-attachment: fixed; 
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
-.main {
-  background: linear-gradient(0deg, oklch(71.5% 0.143 215.221) 0%, rgba(0, 0, 0, 1) 100%);
-}
 .section1 {
   display: flex;
   justify-content: center; /* centre horizontalement */
@@ -44,7 +45,10 @@ body {
   margin-right: 15px;
   margin-bottom: 10px;
 }
-
+.section2{display: flex; justify-content: center; align-items: center}
+.section2 p{
+  color: #ffffffe6 ; padding-bottom: 50px ;
+}
 .container div h1 {
   font-size: 18px;
   text-align: center;
@@ -136,4 +140,40 @@ body {
    display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 780px) {
+  .section1 h1 {
+    font-size: 2.2rem; /* réduire la taille du titre */
+    margin-top: 200px; /* réduire l'espace supérieur */
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .container {
+    grid-template-columns: 1fr; /* 1 colonne pour mobiles */
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .container div {
+    margin: 0 auto 15px auto; /* centrer les div et espacement vertical */
+    padding: 15px;
+  }
+
+  .container div h2 {
+    font-size: 32px; /* réduire taille h2 */
+  }
+
+  .container div h1 {
+    font-size: 16px; /* ajuster h1 */
+  }
+
+  .container div p {
+    font-size: 13px;
+  }
+  .section2 p{ 
+    margin-top: 30px;
+    text-align: center;
+  }
 }

@@ -1,63 +1,97 @@
 footer{
     background-color: #111;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
+
 .footerContainer{
     width: 100%;
-    padding: 70px 30px 20px ;
+    max-width: 100vw;
+    padding: 70px 30px 0px;
+    box-sizing: border-box;
 }
+
 .socialIcons{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;  /* ✅ AJOUTÉ: permet de passer à la ligne */
+    gap: 10px;  /* ✅ AJOUTÉ: remplace margin pour éviter débordement */
 }
+
 .socialIcons a{
     text-decoration: none;
-    padding:  10px;
+    padding: 10px;
     background-color: white;
-    margin: 10px;
     border-radius: 50%;
+    display: inline-flex;  /* ✅ AJOUTÉ: meilleur centrage */
+    align-items: center;
+    justify-content: center;
 }
+
 .socialIcons a i{
     font-size: 2em;
     color: black;
-    opacity: 0,9;
+    opacity: 0.9;  /* ✅ CORRIGÉ: virgule remplacée par point */
 }
-/* Hover affect on social media icon */
+
+/* Hover effect on social media icon */
 .socialIcons a:hover{
     background-color: #111;
     transition: 0.5s;
 }
+
 .socialIcons a:hover i{
     color: white;
     transition: 0.5s;
 }
+
 .footerNav{
     margin: 30px 0;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
 }
+
 .footerNav ul{
     display: flex;
     justify-content: center;
     list-style-type: none;
+    flex-wrap: wrap;  /* ✅ AJOUTÉ: permet de passer à la ligne */
+    padding: 0;  /* ✅ AJOUTÉ: retire padding par défaut */
+    margin: 0;  /* ✅ AJOUTÉ: retire margin par défaut */
 }
+
 .footerNav ul li a{
-    color:white;
+    color: white;
     margin: 20px;
     text-decoration: none;
     font-size: 1.3em;
     opacity: 0.7;
     transition: 0.5s;
-
+    display: inline-block;  /* ✅ AJOUTÉ: meilleure gestion des marges */
 }
+
 .footerNav ul li a:hover{
     opacity: 1;
 }
+
 .footerBottom{
     background-color: #000;
-    padding: 20px;
+    padding: 20px 20px 0;
     text-align: center;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
 }
+
 .footerBottom p{
     color: white;
+    padding-bottom: 20px;
+    margin: 0;  /* ✅ AJOUTÉ: retire margin par défaut */
 }
+
 .designer{
     opacity: 0.7;
     text-transform: uppercase;
@@ -65,17 +99,45 @@ footer{
     font-weight: 400;
     margin: 0px 5px;
 }
+
 @media (max-width: 700px){
+    .footerContainer{
+        padding: 40px 15px 0px;  /* ✅ RÉDUIT: padding horizontal plus petit */
+    }
+    
+    .footerNav{
+        margin: 20px 0;  /* ✅ RÉDUIT */
+    }
+    
     .footerNav ul{
         flex-direction: column;
+        padding: 0;
     } 
+    
     .footerNav ul li{
-        width:100%;
+        width: 100%;
         text-align: center;
-        margin: 10px;
+        margin: 10px 0;  /* ✅ CHANGÉ: margin horizontal à 0 */
     }
+    
+    .footerNav ul li a{
+        margin: 10px;  /* ✅ RÉDUIT: moins de margin en mobile */
+        font-size: 1.1em;  /* ✅ RÉDUIT: texte plus petit */
+    }
+    
+    .socialIcons{
+        gap: 8px;  /* ✅ RÉDUIT */
+    }
+    
     .socialIcons a{
         padding: 8px;
-        margin: 4px;
+    }
+    
+    .socialIcons a i{
+        font-size: 1.5em;  /* ✅ RÉDUIT: icônes plus petites */
+    }
+    
+    .footerBottom{
+        padding: 15px 10px 0;  /* ✅ RÉDUIT */
     }
 }
